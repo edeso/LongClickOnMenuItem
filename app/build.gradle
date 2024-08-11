@@ -6,14 +6,21 @@
 
 apply plugin: 'com.android.application'
 
+repositories {
+    mavenCentral()
+    mavenLocal()
+    google()
+}
+
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdk 34
+    //buildToolsVersion "24.0.0"
 
     defaultConfig {
         applicationId "pl.ceph3us.longclickonmenuitem"
-        minSdkVersion 14
-        targetSdkVersion 24
+		namespace "pl.ceph3us.longclickonmenuitem"
+        minSdk 14
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
@@ -26,6 +33,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
